@@ -21,7 +21,7 @@ def reset_conversation():
       print(key)
       if key != "langchain_messages":
           del st.session_state[key]
-   st.rerun()
+  st.rerun()
 st.button('Reset Chat', on_click=reset_conversation)
 openai_api_key = st.text_input("OpenAI API Key", type="password")
 if not openai_api_key:
