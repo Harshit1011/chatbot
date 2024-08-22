@@ -16,7 +16,7 @@ def reset_conversation():
   #st.session_state.conversation = None
   #st.session_state.chat_history = None
   #st.session_state.chat_history = None
-  msgs.clear()
+  #msgs.clear()
   for key in list(st.session_state.keys()):
       print(key)
       if key != "langchain_messages":
