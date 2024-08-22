@@ -54,3 +54,9 @@ else:
         with st.chat_message("assistant"):
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
+
+    reset_button_key = "reset_button"
+    reset_button = st.button("Reset Chat",key=reset_button_key)
+    if reset_button:
+        st.session_state.conversation = None
+        st.session_state.chat_history = None
